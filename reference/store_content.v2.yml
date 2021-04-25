@@ -1504,7 +1504,9 @@ definitions:
         example: true
         type: boolean
       published_date:
-        $ref: '#/definitions/publishedDate'
+        anyof:
+        - $ref: '#/definitions/publishedDate'
+        - $ref: '#/definitions/publishedDateString'
       published_date_iso8601:
         description: Published date in `ISO 8601` format.
         example: '5/18/2018 1:26:42 PM'
@@ -1543,6 +1545,9 @@ definitions:
         format: time
         example: '+00:00'
     x-internal: false
+  publishedDateString:
+    type: string
+    description: The published date as an RFC2822 string
   authentication:
     description: 'Not returned in any responses, but accepts up to two fields allowing you to set the customer’s password. If a password is not supplied, it is generated automatically. For further information about using this object, please see the Customers resource documentation.'
     type: object
