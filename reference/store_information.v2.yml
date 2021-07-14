@@ -91,7 +91,7 @@ paths:
             Response Schema:
               id: nostrud pariatur incididunt
               domain: consequat ut amet
-              secure_URL: consectetur ullamco ut Excepteur
+              secure_url: consectetur ullamco ut Excepteur
               name: id qui cupidatat anim tempor
               first_name: ut dolore elit
               last_name: cupidatat minim
@@ -187,7 +187,7 @@ definitions:
         description: Primary domain name.
         example: your-store-url.com
         type: string
-      secure_URL:
+      secure_url:
         description: Store’s current HTTPS URL.
         example: 'https://your-store-url.com'
         type: string
