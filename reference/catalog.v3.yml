@@ -297,26 +297,35 @@ paths:
           description: 'Sub-resources to include on a product, in a comma-separated list. If `options` or `modifiers` is used, results are limited to 10 per page.'
           required: false
           in: query
-          type: string
-          enum:
-            - variants
-            - images
-            - custom_fields
-            - bulk_pricing_rules
-            - primary_image
-            - modifiers
-            - options
-            - videos
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
+            enum:
+              - variants
+              - images
+              - custom_fields
+              - bulk_pricing_rules
+              - primary_image
+              - modifiers
+              - options
+              - videos
         - name: include_fields
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: availability
           description: |
             Filter items by availability. Values are: available, disabled, preorder.
@@ -766,26 +775,35 @@ paths:
           description: 'Sub-resources to include on a product, in a comma-separated list. If `options` or `modifiers` is used, results are limited to 10 per page.'
           required: false
           in: query
-          type: string
-          enum:
-            - variants
-            - images
-            - custom_fields
-            - bulk_pricing_rules
-            - primary_image
-            - modifiers
-            - options
-            - videos
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
+            enum:
+              - variants
+              - images
+              - custom_fields
+              - bulk_pricing_rules
+              - primary_image
+              - modifiers
+              - options
+              - videos
         - name: include_fields
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - in: header
           type: string
           name: Accept
@@ -1079,12 +1097,18 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - in: header
           type: string
           name: Accept
@@ -1452,7 +1476,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -1785,7 +1812,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -2055,7 +2085,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -2324,7 +2357,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -2615,7 +2651,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -2862,7 +2901,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -3384,7 +3426,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -3736,7 +3781,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -4247,7 +4295,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -5034,7 +5085,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -5344,7 +5398,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -5646,7 +5703,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -6547,7 +6607,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -7464,7 +7527,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -7863,7 +7929,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -8425,7 +8494,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -8791,7 +8863,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -9115,7 +9190,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -9391,7 +9469,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -9677,7 +9758,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -9921,7 +10005,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -10239,7 +10326,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -10474,7 +10564,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -10740,7 +10833,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -11103,7 +11199,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -11522,7 +11621,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -11884,7 +11986,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -12362,7 +12467,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -12688,7 +12796,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -13076,7 +13187,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -13602,7 +13716,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -14027,7 +14144,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -14264,7 +14384,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -14582,7 +14705,10 @@ paths:
           description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
           required: false
           in: query
-          type: string
+          type: array
+          collectionFormat: csv
+          items:
+            type: string
         - name: exclude_fields
           description: 'Fields to exclude, in a comma-separated list. The specified fields will be excluded from a response. The ID cannot be excluded.'
           required: false
@@ -17245,16 +17371,19 @@ parameters:
     description: 'Sub-resources to include on a product, in a comma-separated list. If `options` or `modifiers` is used, results are limited to 10 per page.'
     required: false
     in: query
-    type: string
-    enum:
-      - variants
-      - images
-      - custom_fields
-      - bulk_pricing_rules
-      - primary_image
-      - modifiers
-      - options
-      - videos
+    type: array
+    collectionFormat: csv
+    items:
+      type: string
+      enum:
+        - variants
+        - images
+        - custom_fields
+        - bulk_pricing_rules
+        - primary_image
+        - modifiers
+        - options
+        - videos
   FilterIncludeFieldsParam:
     name: include_fields
     description: 'Fields to include, in a comma-separated list. The ID and the specified fields will be returned.'
