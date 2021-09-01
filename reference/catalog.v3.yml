@@ -18620,7 +18620,10 @@ definitions:
         example: 1
         description: 'Order in which the option is displayed on the storefront. '
       option_values:
-        $ref: '#/definitions/productOptionOptionValue_Full'
+        type: array
+        description: Array of option and option values IDs that make up this variant. Will be empty if the variant is the product's base variant.
+        items:
+          $ref: '#/definitions/productOptionOptionValue_Full'
   productOption_Full:
     allOf:
       - $ref: '#/definitions/productOption_Base'
