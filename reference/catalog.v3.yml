@@ -20451,7 +20451,7 @@ definitions:
               The unique numerical ID of the product; increments sequentially.
             x-required:
               - put
-      - $ref: '#/definitions/product_Base'
+      - $ref: '#/definitions/product_PartialBase'
       - type: object
         properties:
           variants:
