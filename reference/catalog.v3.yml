@@ -22224,10 +22224,10 @@ components:
       allOf:
         - $ref: '#/components/schemas/product_Base'
           required: 
-            - 'name'
-            - 'price'
-            - 'weight'
-            - 'type'
+            - name
+            - price
+            - weight
+            - type
         - type: object
           properties:
             variants:
