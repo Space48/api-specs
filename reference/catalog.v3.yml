@@ -22223,12 +22223,12 @@ components:
       description: The model for a POST to create a product.
       allOf:
         - $ref: '#/components/schemas/product_Base'
-          required: 
+        - type: object
+          required:
             - name
             - price
             - weight
             - type
-        - type: object
           properties:
             variants:
               type: array
